@@ -1,0 +1,37 @@
+Code mnémonique        Désignation                  Type           
+UTILISATEUR
+nom		     nom de l'inscrit 	           A	
+prenom              prenom de l'inscrit            A
+email                l'émail à contacter           AN 
+date_naissance      date de naissance              DATE
+mot_de_passe         mot de passe                  AN
+etat_utilisateur     état de l'utilisateur                        N
+rôle                 role de l'utilisateur                         A
+montant              montant d'une transaction     N 
+numero_compte        numero du compte              AN 
+
+email                émail à contacter             AN
+
+COMPTE 
+solde_compte         solde du compte               N 
+Iban                identité du compte            AN 
+etat_compte          etat du compte               LOGICAL
+
+VIREMENT 
+montant_virement   montant du virement            N
+date_virement      date du virement               DATE
+motif_virement     motif du virement              A
+
+
+DEPOT
+montant_depot       montant du depot 
+identité_depot      identité du depot             A
+motif_depot 
+date_depot         date du depot                 DATE 
+motif_depot        motif du depot                 A 
+
+
+RETRAIT
+date_retrait        date de retrait             DATE 
+montant_retrait     montant du retrait            N
+motif_retrait       motif du retrait              A

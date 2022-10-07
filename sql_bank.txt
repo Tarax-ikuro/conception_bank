@@ -1,0 +1,59 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE Utilisateur(" & _
+   "Id_Utilisateur INT," & _
+   "nom VARCHAR(50) NOT NULL," & _
+   "prenom_ VARCHAR(50) NOT NULL," & _
+   "date_naissance DATE NOT NULL," & _
+   "rôle VARCHAR(50) NOT NULL," & _
+   "etat_utilisateur LOGICAL NOT NULL," & _
+   "mot_de_passe VARCHAR(255) NOT NULL," & _
+   "email VARCHAR(255) NOT NULL," & _
+   "numero_tel VARCHAR(10) NOT NULL," & _
+   "PRIMARY KEY(Id_Utilisateur)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Compte(" & _
+   "Id_Compte INT," & _
+   "solde DECIMAL(10,2) NOT NULL," & _
+   "iban VARCHAR(34) NOT NULL," & _
+   "etat_compte LOGICAL NOT NULL," & _
+   "Id_Utilisateur INT NOT NULL," & _
+   "PRIMARY KEY(Id_Compte)," & _
+   "FOREIGN KEY(Id_Utilisateur) REFERENCES Utilisateur(Id_Utilisateur)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Dépôt(" & _
+   "Id_Dépot INT," & _
+   "montant_depot DECIMAL(10,2) NOT NULL," & _
+   "date_depot DATETIME NOT NULL," & _
+   "etat_depot LOGICAL NOT NULL," & _
+   "identité_depot VARCHAR(50) NOT NULL," & _
+   "motif_depot VARCHAR(255) NOT NULL," & _
+   "Id_Compte INT NOT NULL," & _
+   "PRIMARY KEY(Id_Dépot)," & _
+   "FOREIGN KEY(Id_Compte) REFERENCES Compte(Id_Compte)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Retrait(" & _
+   "Id_Retrait INT," & _
+   "montant_retrait VARCHAR(50) NOT NULL," & _
+   "date_retrait DATETIME NOT NULL," & _
+   "motif_retrait VARCHAR(50) NOT NULL," & _
+   "Id_Compte INT NOT NULL," & _
+   "PRIMARY KEY(Id_Retrait)," & _
+   "FOREIGN KEY(Id_Compte) REFERENCES Compte(Id_Compte)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Virement(" & _
+   "Id_Compte_emetteur INT," & _
+   "Id_Compte_recepteur INT," & _
+   "montant_virement DECIMAL(10,2) NOT NULL," & _
+   "date_virement DATETIME NOT NULL," & _
+   "motif_virement VARCHAR(255) NOT NULL," & _
+   "PRIMARY KEY(Id_Compte_emetteur, Id_Compte_recepteur)," & _
+   "FOREIGN KEY(Id_Compte_emetteur) REFERENCES Compte(Id_Compte)," & _
+   "FOREIGN KEY(Id_Compte_recepteur) REFERENCES Compte(Id_Compte)" & _
+");"   
+
+End Sub

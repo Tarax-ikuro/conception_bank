@@ -1,0 +1,39 @@
+Au niveau conception : 6/8
+règles de gestion : ok
+Dico de données :ok
+un diagramme d'use case :
+diagramme de classe :
+un diagramme de séquence : 
+MCD : ok 
+MLD: ok 
+MPD: ok 
+
+Client: 
+Données client basique (nom prenom âge ). 
+Le client peut avoir un pour plusieurs comptes. 
+Le client a un espace dédié (regarder son compte (dashborad )).
+Le client peut faire un dépôt d'argent ou le retrait.
+le client peut faire un virement vers un compte. 
+le client peut de demande  la suppression de son compte. 
+
+
+
+le crédit est validé par un admin.
+un client peut s'inscrire. 
+
+
+Compte
+un compte peut être crédituer ou débiteur (solde + ou solde -).
+un compte peut faire un retait ou des dépôts .
+le compte contient un solde et un numéro de compte. 
+
+Admin
+un admin possede ses infos persos) (nom prenom...etc).
+un admin peut gérer un ou plusieurs clients.
+un admin peut valider la suppresion de compte. 
+un admin peut valider des dépôts d'argents. 
+un admin peut valider l'inscription d'un client. 
+un admin peut valider l'ajout ou la suppression d'un compte client. 
+tous dépots est validé par l'admin. 
+l'admin crée le compte du client (envoie d'identifaint de co par mail). 
+l'admin peut validé ou refusé un dépôt. 

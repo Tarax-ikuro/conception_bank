@@ -1,0 +1,49 @@
+Au niveau conception :
+règles de gestion :
+Dico de données :
+un diagramme d'use case :
+diagramme de classe :
+un diagramme de séquence : 
+
+
+Client: 
+Données client basique (nom prenom âge ). 
+Le client peut avoir un oyu plusieur comptes. 
+Le client a un espace dédié (regarder son compte (dashborad )).
+Le client peut faire un dépôt d'argent ou le retrait.
+le client peut faire un virement vers un compte. 
+le client peut de demande  la suppression de son compte. 
+le client peut faire un virement vers un compte externe à ses comptes.
+
+
+le crédit est validé par un admin.
+un client peut s'inscrire. 
+
+
+Compte:
+un compte peut être crédituer ou débiteur (solde + ou solde -)
+un compte peut faire un retait ou des dépôts 
+le compte contient un solde et un numéro de compte (RIB)
+
+Admin:
+un admin possede ses infos persos) (nom prenom...etc). 
+un admin peut gérer un ou plusieurs clients.
+un admin peut valider des dépôts d'argents. 
+un admin peut valider l'inscription d'un client. 
+un admin peut valider l'ajout ou la suppression d'un compte client. 
+tous dépots est validé par l'admin. 
+
+
+
+Dépôt:
+Un dépôt contient cotient un montant 
+un dépôt est validé par un admin 
+un dépôt concerne un compte déstinateur et expediteur 
+un dépôt contient un motif 
+
+
+Retrait:
+Un retrait contient cotient un montant.
+un retrait est validé par un admin.
+un retrait concerne un compte déstinateur et expediteur.
+un retrait contient un motif.
